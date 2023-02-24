@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class = "small-container">
+    <div class="categories">
+      <h2 class = "title">Recent Products</h2>
+      <div class="row">
+        <div class="home-special">
+          <img src="{{ url_for('static', filename='images/waffle.jpg')}}">
+        </div>
+        <div class="home-special">
+          <img src="{{ url_for('static', filename='images/redvelvet.jpg')}}">
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="small-container">
+    <h2 class = "title">Popular Choices</h2>
+    <div class="row">
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/custardtart.jpg')}}">
+        <h4>Custard Tart</h4>
+        <p>$3.00</p>
+      </div>
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/randytart.jpg')}}">
+        <h4>Randy Tart</h4>
+        <p>$3.00</p>
+      </div>
+      <div class="col-4">
+        <img src="{{ url_for('static', filename='images/vanila.png')}}">
+        <h4>Vanila Slice</h4>
+        <p>$3.00</p>
+      </div>
+    </div>
+  </div>
+  
+  
+  <div class="comments">
+    <div class="small-container">
+      <div class="row">
+        <div class="comments-2">
+          <p>Petite Treats has the best <em>cheesecake </em> I've ever had. <br>Always fresh, and melts in the mouth.<br> Would recommend highly!</p>
+          <img src="{{ url_for('static', filename='images/cheesecake.png')}}">
+          <h3>Randy Tart</h3>
+        </div>
+        <div class="comments-2">
+          <p>I'm addicted to the <em>Danish Pastries</em><br>and always drop in here on my way to work!</p>
+          <img src="{{ url_for('static', filename='images/danish.jpg')}}">
+          <h3>Randy Tart</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class = "padding"></div>
+{% endblock %}

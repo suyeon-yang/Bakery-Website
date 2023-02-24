@@ -1,0 +1,101 @@
+<html>
+    <head>
+      {% if title %}
+      <title>{{ title }} - Web Development</title>
+      {% else %}
+      <title>Welcome to Web Development</title>
+      {% endif %}
+      <!-- add the right css file -->
+        {% block styles %}
+        <link rel="stylesheet" href="{{url_for('.static', filename='styles.css')}}">
+        <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Zilla+Slab:wght@400;500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@800&display=swap" rel="stylesheet">
+        {% endblock %}
+    </head>
+    <body>
+
+      <header class = "header">
+        <div class="container">
+          <div class="navbar">
+            <div class="home-logo">
+              <a href = "/index"><h3>Petite Treats</h3></a>
+            </div>
+            <nav>
+                <ul id = "MenuItems">
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/specials">Specials</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><a href="/newsletter">Newsletter</a></li>
+                </ul>
+            </nav>
+            <img src="{{ url_for('static', filename='images/menu.png')}}" alt="menu-icon" class= "menu-icon" onclick="menutoggle()">
+          </div>
+        <div class="row">
+          <div class="header-2">
+            <h1>Bake a world<br> a better place.</h1>
+            <p>We are a bakery full of happiness.</p>
+            <a href="/products" class = "button">Products</a>
+          </div>
+          <div class="header-2">
+            <img src="{{ url_for('static', filename='images/bakery.jpg')}}">
+          </div>
+          </div>
+        </div>
+       </header>
+        
+        {% block content %}{% endblock %}
+        <footer class = "footer">
+          <div class = "container">
+            <div class = 'row'>
+              
+              <div class = "first-footer">
+                <h3>Contacts</h3>
+                <p>Catering: 0433 3333 333</p>
+                <p>Contacts: 0455 5555 555</p>
+              </div>
+              
+              <div class = "second-footer">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="/index">Home</a></li>
+                    <li><a href="/products">Products</a></li>
+                    <li><a href="/specials">Specials</a></li>
+                    <li><a href="/contactus">Contact Us</a></li>
+                    <li><a href="/newsletter">Newsletter</a></li>
+                </ul>
+              </div>
+              
+              <div class = "third-footer">
+                <h3>Address</h3>
+                <p>123 Prize Lane, Kirwan, QLD</p>
+              </div>
+            </div>
+          </div>
+        </footer>
+        
+        <script>
+          var MenuItems = document.getElementById("MenuItems");
+          MenuItems.style.maxHeight = "0px";
+          
+          function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+              MenuItems.style.maxHeight = "200px"
+            }
+            else{
+              MenuItems.style.maxHeight = "0px"
+            }
+          }
+        </script>
+        
+        
+    </body>
+    
+</html>

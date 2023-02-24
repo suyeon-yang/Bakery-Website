@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="small-container product-detail">
+    <h2 class = "title">Product Details</h2>
+    <div class="row">
+      <div class="header-2">
+        <img src="{{ url_for('static', filename='images/raspcheese.jpg')}}">
+      </div>
+      <div class="header-2">
+        <h2>Raspberry Cheesecake</h2>
+        <h4>$5.50</h4>
+        <h3>Product Details</h3>
+        <p>Our <strong>Raspberry Cheesecake </strong> consists of two layers. The main, and thickest layer, consists of a mixture of soft, fresh cheese, eggs, and sugar. The bottom layer consists of a crust or base made from crushed cookies, graham crackers, and pastry. It is baked and refrigerated. This makes an excellent cheesecake, similar to one you would get in a restaurant. Great for special occasions!</p>
+      </div>
+    </div>
+  </div>
+
+<div class="small-container">
+  <h2 class = "title">Other Products</h2>
+  <div class="row">
+    <div class="col-4">
+        <a href="/custardtart"><img src="{{ url_for('static', filename='images/custardtart.jpg')}}"></a>
+      <h4>Custart Tart</h4>
+      <p>$3.95</p>
+    </div>
+    <div class="col-4">
+        <a href="/applecake"><img src="{{ url_for('static', filename='images/applecake.jpg')}}"></a>
+      <h4>Apple Cake Slice</h4>
+      <p>$5.50</p>
+    </div>
+    <div class="col-4">
+        <a href="/randytart"><img src="{{ url_for('static', filename='images/randytart.jpg')}}"></a>
+      <h4>Randy Tart</h4>
+      <p>$3.95</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

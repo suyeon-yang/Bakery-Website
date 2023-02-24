@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="small-container product-detail">
+    <h2 class = "title">Product Details</h2>
+    <div class="row">
+      <div class="header-2">
+        <img src="{{ url_for('static', filename='images/custardtart.jpg')}}">
+      </div>
+      <div class="header-2">
+        <h2>Custard Tart</h2>
+        <h4>$3.95</h4>
+        <h3>Product Details</h3>
+        <p>Our <strong>Custard Tart</strong> is a baked pastry consisting of an outer pastry crust filled with egg custard. It is made from shortcrust pastry, eggs, sugar, milk or cream, and vanilla, sprinkled with nutmeg and then baked. Custard tarts has long been a favourite pastry in Britain and in Commonwealth.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="small-container">
+  <h2 class = "title">Other Products</h2>
+  <div class="row">
+    <div class="col-4">
+        <a href="/donuts"><img src="{{ url_for('static', filename='images/donuts.jpg')}}"></a>
+      <h4>Donuts</h4>
+      <p>$4.50</p>
+    </div>
+    <div class="col-4">
+        <a href="/randytart"><img src="{{ url_for('static', filename='images/randytart.jpg')}}"></a>
+      <h4>Randy Tart</h4>
+      <p>$3.95</p>
+    </div>
+    <div class="col-4">
+        <a href="/vanilaslice"><img src="{{ url_for('static', filename='images/vanila.png')}}"></a>
+      <h4>Vanila Slice</h4>
+      <p>$4.50</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

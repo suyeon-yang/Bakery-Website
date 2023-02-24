@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+<!-- News Letter forms -->
+{% block content %}
+
+<div class ="contact">
+    
+    <form action="{{ url_for('get_newsletter') }}" method=post class = "contact-form">
+        <h3>Newsletter</h3>
+        
+            <!-- name forms -->
+            <div class = 'label'>
+                {{form.csrf_token}}
+                {{ form.name.label }} <br>
+                {{ form.name(placeholder='Your name') }}
+            </div>
+            
+             <div class = 'label'>
+                {{form.preference.label}}<br>
+                {{form.preference}}
+                 
+            </div>
+            
+            <div class = 'label'>
+                {{form.birthday.label}}<br>
+                {{form.birthday(placeholder='Birthday')}}
+                 
+            </div>
+            
+            <!-- email forms -->
+            <div class = 'label'>
+                {{ form.email.label }} <br>
+                {{ form.email(placeholder='Your e-mail ...') }}
+                 {% if form.email.errors %}
+                <ul>
+                {% for error in form.email.errors %}
+    		    <li>{{ error }}</li>
+                {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            
+            <div class = "radio">
+                   <p>Do you want to subscribe to our bakery?</p>
+                
+                <div>
+                {{ form.hidden_tag() }}    
+                {{form.radio}}
+                </div>
+               
+            </div>
+          
+            <!-- Submit button -->
+            
+            <p class = "contact-button">{{ form.submit }}</p>
+            
+    </form>
+</div>
+
+{% endblock %}

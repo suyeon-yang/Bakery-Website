@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class = "small-container">
+  <div class="categories">
+    <h2 class = "title">Specials</h2>
+    <div class="row">
+      <div class="home-special">
+        <img src="{{ url_for('static', filename='images/scone.jpg')}}">
+        <h2>$3.50</h2>
+        <p>Scone</p>
+      </div>
+      <div class="home-special">
+        <img src="{{ url_for('static', filename='images/redvelvet.jpg')}}">
+        <h2>$5.50</h2>
+        <p>Red velvet</p>
+      </div>
+      <div class="home-special">
+        <img src="{{ url_for('static', filename='images/waffle.jpg')}}">
+        <h2>$5.00</h2>
+        <p>Waffle</p>
+      </div>
+      <div class="home-special">
+        <img src="{{ url_for('static', filename='images/muffin.jpg')}}">
+        <h2>$4.50</h2>
+        <p>Muffin</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

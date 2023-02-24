@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="small-container product-detail">
+    <h2 class = "title">Product Details</h2>
+    <div class="row">
+      <div class="header-2">
+        <img src="{{ url_for('static', filename='images/donuts.jpg')}}">
+      </div>
+      <div class="header-2">
+        <h2>Donuts</h2>
+        <h4>$4.50</h4>
+        <h3>Product Details</h3>
+        <p> Our <strong>Donuts</strong> are yeast-raised which has sugar toppings and maple glazing on its surface. It is deep-fried from a flour dough. It is injected with a milk-based cream fillings. It is a great choice when you want all the simplicity in your dessert.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="small-container">
+  <h2 class = "title">Other Products</h2>
+  <div class="row">
+    <div class="col-4">
+        <a href="/custardtart"><img src="{{ url_for('static', filename='images/custardtart.jpg')}}"></a>
+      <h4>Custart Tart</h4>
+      <p>$3.95</p>
+    </div>
+    <div class="col-4">
+        <a href="/randytart"><img src="{{ url_for('static', filename='images/randytart.jpg')}}"></a>
+      <h4>Randy Tart</h4>
+      <p>$3.95</p>
+    </div>
+    <div class="col-4">
+        <a href="/vanilaslice"><img src="{{ url_for('static', filename='images/vanila.png')}}"></a>
+      <h4>Vanila Slice</h4>
+      <p>$4.50</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

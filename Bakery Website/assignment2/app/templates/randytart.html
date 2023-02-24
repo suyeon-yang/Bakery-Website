@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="small-container product-detail">
+    <h2 class = "title">Product Details</h2>
+    <div class="row">
+      <div class="header-2">
+        <img src="{{ url_for('static', filename='images/randytart.jpg')}}">
+      </div>
+      <div class="header-2">
+        <h2>Randy Tarts</h2>
+        <h4>$3.95</h4>
+        <h3>Product Details</h3>
+        <p>Our <strong>Randy Tart </strong> is a typical free-standing with firm pastry base consisting of dough, itself made of flour, thick filling, and perpendicular sides. The pastry is a shortcrust pastry, and is fruit-based. Too bad if you miss our randy tarts!</p>
+      </div>
+    </div>
+  </div>
+
+<div class="small-container">
+  <h2 class = "title">Other Products</h2>
+  <div class="row">
+    <div class="col-4">
+        <a href="/donuts"><img src="{{ url_for('static', filename='images/donuts.jpg')}}"></a>
+      <h4>Donuts</h4>
+      <p>$4.50</p>
+    </div>
+    <div class="col-4">
+        <a href="/applecake"><img src="{{ url_for('static', filename='images/applecake.jpg')}}"></a>
+      <h4>Apple Cake Slice</h4>
+      <p>$3.00</p>
+    </div>
+    <div class="col-4">
+        <a href="/vanilaslice"><img src="{{ url_for('static', filename='images/vanila.png')}}"></a>
+      <h4>Vanila Slice</h4>
+      <p>$3.00</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

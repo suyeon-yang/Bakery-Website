@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class = "padding"></div>
+<div class="small-container">
+    <h2 class = "title">Products</h2>
+    <div class="row">
+      <div class="col-4">
+        <a href="/vanilaslice"><img src="{{ url_for('static', filename='images/vanila.png')}}"></a>
+        <h4>Vanila Slice</h4>
+        <p>$4.50</p>
+      </div>
+      <div class="col-4">
+        <a href="/randytart"><img src="{{ url_for('static', filename='images/randytart.jpg')}}"></a>
+        <h4>Randy Tart</h4>
+        <p>$3.95</p>
+      </div>
+      <div class="col-4">
+        <a href="/applecake"><img src="{{ url_for('static', filename='images/applecake.jpg')}}"></a>
+        <h4>Apple Cake Slice</h4>
+        <p>$5.50</p>
+      </div>
+      <div class="col-4">
+        <a href="/custardtart"><img src="{{ url_for('static', filename='images/custardtart.jpg')}}"></a>
+        <h4>Custard Tart</h4>
+        <p>$3.95</p>
+      </div>
+      <div class="col-4">
+        <a href="/raspcheese"><img src="{{ url_for('static', filename='images/raspcheese.jpg')}}"></a>
+        <h4>Raspberry Cheesecake</h4>
+        <p>$5.50</p>
+      </div>
+      <div class="col-4">
+        <a href="/donuts"><img src="{{ url_for('static', filename='images/donuts.jpg')}}"></a>
+        <h4>Donuts</h4>
+        <p>$4.50</p>
+      </div>
+    </div>
+  </div>
+  
+{% endblock %}

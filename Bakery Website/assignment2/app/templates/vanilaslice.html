@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="small-container product-detail">
+    <h2 class = "title">Product Details</h2>
+    <div class="row">
+      <div class="header-2">
+        <img src="{{ url_for('static', filename='images/vanila.png')}}">
+      </div>
+      <div class="header-2">
+        <h2>Vanila Slice</h2>
+        <h4>$4.50</h4>
+        <h3>Product Details</h3>
+        <p><strong>Vanila Slice</strong> is a famous Australian sweet slice recipe that's also known as 'custard slice' or 'vanilla slice'. Our Vanila Slice is made up of a layer of vanilla bean-speckled pastry cream sandwiched between crunchy layers of puff pastry. It would not be complete without New Zealand’s own Heilala Vanilla premium vanilla beans, bringing addictive sweetness and depth to that velvety custard filling.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="small-container">
+  <h2 class = "title">Other Products</h2>
+  <div class="row">
+    <div class="col-4">
+        <a href="/applecake"><img src="{{ url_for('static', filename='images/applecake.jpg')}}"></a>
+      <h4>Apple Cake Slice</h4>
+      <p>$5.50</p>
+    </div>
+    <div class="col-4">
+        <a href="/custardtart"><img src="{{ url_for('static', filename='images/custardtart.jpg')}}"></a>
+      <h4>Custart Tart</h4>
+      <p>$3.95</p>
+    </div>
+    <div class="col-4">
+        <a href="/randytart"><img src="{{ url_for('static', filename='images/randytart.jpg')}}"></a>
+      <h4>Randy Tart</h4>
+      <p>$3.95</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

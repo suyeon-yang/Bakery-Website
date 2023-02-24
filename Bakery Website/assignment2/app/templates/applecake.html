@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="small-container product-detail">
+    <h2 class = "title">Product Details</h2>
+    <div class="row">
+      <div class="header-2">
+        <img src="{{ url_for('static', filename='images/applecake.jpg')}}">
+      </div>
+      <div class="header-2">
+        <h2>Apple Cake Slice</h2>
+        <h4>$5.50</h4>
+        <h3>Product Details</h3>
+        <p>Our <strong>Apple Cake Slice</strong> are prepared from sour apples and baked in a dough made from sugar, butter, flour, eggs, and baking powder. It is topped with apples, cinnamon and sugar, and chopped almonds. Its water-retention will help normally dry cake to stay moist in your mouth.</p>
+      </div>
+    </div>
+  </div>
+
+<div class="small-container">
+  <h2 class = "title">Other Products</h2>
+  <div class="row">
+    <div class="col-4">
+        <a href="/raspcheese"><img src="{{ url_for('static', filename='images/raspcheese.jpg')}}"></a>
+      <h4>Raspberry Cheesecake</h4>
+      <p>$5.50</p>
+    </div>
+    <div class="col-4">
+        <a href="/custardtart"><img src="{{ url_for('static', filename='images/custardtart.jpg')}}"></a>
+      <h4>Custard Tart</h4>
+      <p>$3.95</p>
+    </div>
+    <div class="col-4">
+        <a href="/donuts"><img src="{{ url_for('static', filename='images/donuts.jpg')}}"></a>
+      <h4>Donuts</h4>
+      <p>$4.50</p>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
